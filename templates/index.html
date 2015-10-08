@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mitchell Friedman - Lab 1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Networking Class</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Index</a></li>
+                  <li><a href="/dynamic">Dynamic</a></li>
+                  <li><a href="/static">Static</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="center-index">
+                <h1 class="cover-heading">Mitchell Friedman</h1>
+                <p class="lead">
+                    Student Number: 0828745<br>
+                    Lab Section: 1
+                </p>
+                <p class="lead">
+                    The data for this lab is being processed entirely on the Server side.  In the future, I will do the same thing.  This is because it will make the responses that I give to the frontend much smaller since I am getting rid of all the useless data that I won't need.  This is a good strategy to build a scalable and highly available API since each request is smaller.  Eventually, when I implement a cache, storing less data in the cache will be useful as well. :)
+                </p>
+                <br><br>
+                <p class="lead">
+                In terms of preventing SQL injections I found that MySQLdb has support for named parameters that will automatically filter the strings and make them safe for using directly in queries.  As a part of PEP 249 many libraries support this, including the one we are using.  So I made sure to correctly use tuples in my formatted strings in the queries as outlined <a href="http://stackoverflow.com/questions/7929364/python-best-practice-and-securest-to-connect-to-mysql-and-execute-queries">here</a>.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+        
+  </body>
+</html>
+
